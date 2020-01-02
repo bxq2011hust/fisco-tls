@@ -11,11 +11,11 @@ package x509
 
 import (
 	"bytes"
-	"crypto"
+	"github.com/bxq2011hust/fisco-tls/crypto"
 	"crypto/dsa"
 	"crypto/ecdsa"
 	"crypto/ed25519"
-	"crypto/elliptic"
+	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
 	"crypto/rsa"
 	_ "crypto/sha1"
 	_ "crypto/sha256"
