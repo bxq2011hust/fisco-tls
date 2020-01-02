@@ -7,7 +7,7 @@ package tls
 import (
 	"bytes"
 	"crypto/rsa"
-	"crypto/x509"
+	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"encoding/base64"
 	"encoding/binary"
 	"encoding/pem"
@@ -809,7 +809,7 @@ func TestHandshakeClientCertECDSA(t *testing.T) {
 
 // TestHandshakeClientCertRSAPSS tests rsa_pss_rsae_sha256 signatures from both
 // client and server certificates. It also serves from both sides a certificate
-// signed itself with RSA-PSS, mostly to check that crypto/x509 chain validation
+// signed itself with RSA-PSS, mostly to check that github.com/bxq2011hust/fisco-tls/crypto/x509 chain validation
 // works.
 func TestHandshakeClientCertRSAPSS(t *testing.T) {
 	cert, err := x509.ParseCertificate(testRSAPSSCertificate)
@@ -1929,7 +1929,7 @@ func testGetClientCertificate(t *testing.T, version uint16) {
 
 func TestRSAPSSKeyError(t *testing.T) {
 	// crypto/tls does not support the rsa_pss_pss_* SignatureSchemes. If support for
-	// public keys with OID RSASSA-PSS is added to crypto/x509, they will be misused with
+	// public keys with OID RSASSA-PSS is added to github.com/bxq2011hust/fisco-tls/crypto/x509, they will be misused with
 	// the rsa_pss_rsae_* SignatureSchemes. Assert that RSASSA-PSS certificates don't
 	// parse, or that they don't carry *rsa.PublicKey keys.
 	b, _ := pem.Decode([]byte(`

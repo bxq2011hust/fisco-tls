@@ -163,11 +163,11 @@ int CopyPEMRoots(CFDataRef *pemRoots, CFDataRef *untrustedPemRoots, bool debugDa
 	int i;
 
 	if (debugDarwinRoots) {
-		fprintf(stderr, "crypto/x509: kSecTrustSettingsResultInvalid = %d\n", kSecTrustSettingsResultInvalid);
-		fprintf(stderr, "crypto/x509: kSecTrustSettingsResultTrustRoot = %d\n", kSecTrustSettingsResultTrustRoot);
-		fprintf(stderr, "crypto/x509: kSecTrustSettingsResultTrustAsRoot = %d\n", kSecTrustSettingsResultTrustAsRoot);
-		fprintf(stderr, "crypto/x509: kSecTrustSettingsResultDeny = %d\n", kSecTrustSettingsResultDeny);
-		fprintf(stderr, "crypto/x509: kSecTrustSettingsResultUnspecified = %d\n", kSecTrustSettingsResultUnspecified);
+		fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: kSecTrustSettingsResultInvalid = %d\n", kSecTrustSettingsResultInvalid);
+		fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: kSecTrustSettingsResultTrustRoot = %d\n", kSecTrustSettingsResultTrustRoot);
+		fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: kSecTrustSettingsResultTrustAsRoot = %d\n", kSecTrustSettingsResultTrustAsRoot);
+		fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: kSecTrustSettingsResultDeny = %d\n", kSecTrustSettingsResultDeny);
+		fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: kSecTrustSettingsResultUnspecified = %d\n", kSecTrustSettingsResultUnspecified);
 	}
 
 	// Get certificates from all domains, not just System, this lets
@@ -211,7 +211,7 @@ int CopyPEMRoots(CFDataRef *pemRoots, CFDataRef *untrustedPemRoots, bool debugDa
 					CFErrorRef errRef = NULL;
 					CFStringRef summary = SecCertificateCopyShortDescription(NULL, cert, &errRef);
 					if (errRef != NULL) {
-						fprintf(stderr, "crypto/x509: SecCertificateCopyShortDescription failed\n");
+						fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: SecCertificateCopyShortDescription failed\n");
 						CFRelease(errRef);
 						continue;
 					}
@@ -220,7 +220,7 @@ int CopyPEMRoots(CFDataRef *pemRoots, CFDataRef *untrustedPemRoots, bool debugDa
 					CFIndex maxSize = CFStringGetMaximumSizeForEncoding(length, kCFStringEncodingUTF8) + 1;
 					char *buffer = malloc(maxSize);
 					if (CFStringGetCString(summary, buffer, maxSize, kCFStringEncodingUTF8)) {
-						fprintf(stderr, "crypto/x509: %s returned %d\n", buffer, (int)result);
+						fprintf(stderr, "github.com/bxq2011hust/fisco-tls/crypto/x509: %s returned %d\n", buffer, (int)result);
 					}
 					free(buffer);
 					CFRelease(summary);
@@ -287,7 +287,7 @@ func loadSystemRoots() (*CertPool, error) {
 	var data, untrustedData C.CFDataRef
 	err := C.CopyPEMRoots(&data, &untrustedData, C.bool(debugDarwinRoots))
 	if err == -1 {
-		return nil, errors.New("crypto/x509: failed to load darwin system roots with cgo")
+		return nil, errors.New("github.com/bxq2011hust/fisco-tls/crypto/x509: failed to load darwin system roots with cgo")
 	}
 	defer C.CFRelease(C.CFTypeRef(data))
 	defer C.CFRelease(C.CFTypeRef(untrustedData))

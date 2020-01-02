@@ -1266,7 +1266,7 @@ func (c *lruSessionCache) Get(sessionKey string) (*ClientSessionState, bool) {
 	return nil, false
 }
 
-// TODO(jsing): Make these available to both crypto/x509 and crypto/tls.
+// TODO(jsing): Make these available to both github.com/bxq2011hust/fisco-tls/crypto/x509 and crypto/tls.
 type dsaSignature struct {
 	R, S *big.Int
 }

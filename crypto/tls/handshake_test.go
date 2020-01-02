@@ -7,7 +7,7 @@ package tls
 import (
 	"bufio"
 	"crypto/ed25519"
-	"crypto/x509"
+	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"encoding/hex"
 	"errors"
 	"flag"

@@ -7,7 +7,7 @@ package tls
 import (
 	"bytes"
 	"crypto"
-	"crypto/x509"
+	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"encoding/json"
 	"errors"
 	"fmt"

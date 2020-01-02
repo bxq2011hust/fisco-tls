@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"crypto/ecdsa"
 	"crypto/ed25519"
-	"crypto/elliptic"
+	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
 	"crypto/rsa"
 	"encoding/hex"
 	"reflect"

@@ -7,9 +7,9 @@ package x509
 import (
 	"bytes"
 	"crypto/ecdsa"
-	"crypto/elliptic"
+	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
 	"crypto/rand"
-	"crypto/x509/pkix"
+	"github.com/bxq2011hust/fisco-tls/crypto/x509/pkix"
 	"encoding/asn1"
 	"encoding/hex"
 	"encoding/pem"

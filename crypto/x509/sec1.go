@@ -6,7 +6,7 @@ package x509
 
 import (
 	"crypto/ecdsa"
-	"crypto/elliptic"
+	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
 	"encoding/asn1"
 	"errors"
 	"fmt"
