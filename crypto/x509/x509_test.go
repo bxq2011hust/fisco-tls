@@ -20,7 +20,7 @@ import (
 	"encoding/hex"
 	"encoding/pem"
 	"fmt"
-	"internal/testenv"
+	"github.com/bxq2011hust/fisco-tls/internal/testenv"
 	"math/big"
 	"net"
 	"net/url"

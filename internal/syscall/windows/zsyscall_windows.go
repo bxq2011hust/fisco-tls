@@ -3,7 +3,7 @@
 package windows
 
 import (
-	"internal/syscall/windows/sysdll"
+	"github.com/bxq2011hust/fisco-tls/internal/syscall/windows/sysdll"
 	"syscall"
 	"unsafe"
 )

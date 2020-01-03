@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"go/ast"
 	"go/token"
-	. "internal/reflectlite"
+	. "github.com/bxq2011hust/fisco-tls/internal/reflectlite"
 	"io"
 	"testing"
 )

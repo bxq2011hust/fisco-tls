@@ -7,7 +7,7 @@
 package poll_test
 
 import (
-	. "internal/poll"
+	. "github.com/bxq2011hust/fisco-tls/internal/poll"
 	"io"
 	"testing"
 )

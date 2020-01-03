@@ -4,6 +4,6 @@
 
 package sha256
 
-import "internal/cpu"
+import "github.com/bxq2011hust/fisco-tls/internal/cpu"
 
 var useAsm = cpu.S390X.HasSHA256

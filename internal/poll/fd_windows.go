@@ -6,8 +6,8 @@ package poll
 
 import (
 	"errors"
-	"internal/race"
-	"internal/syscall/windows"
+	"github.com/bxq2011hust/fisco-tls/internal/race"
+	"github.com/bxq2011hust/fisco-tls/internal/syscall/windows"
 	"io"
 	"runtime"
 	"sync"

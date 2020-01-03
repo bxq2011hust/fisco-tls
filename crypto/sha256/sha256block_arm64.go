@@ -4,7 +4,7 @@
 
 package sha256
 
-import "internal/cpu"
+import "github.com/bxq2011hust/fisco-tls/internal/cpu"
 
 var k = _K
 

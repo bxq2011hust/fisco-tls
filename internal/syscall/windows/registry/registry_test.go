@@ -14,7 +14,7 @@ import (
 	"testing"
 	"unsafe"
 
-	"internal/syscall/windows/registry"
+	"github.com/bxq2011hust/fisco-tls/internal/syscall/windows/registry"
 )
 
 func randKeyName(prefix string) string {

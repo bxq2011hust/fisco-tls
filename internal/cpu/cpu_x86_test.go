@@ -7,7 +7,7 @@
 package cpu_test
 
 import (
-	. "internal/cpu"
+	. "github.com/bxq2011hust/fisco-tls/internal/cpu"
 	"os"
 	"runtime"
 	"testing"

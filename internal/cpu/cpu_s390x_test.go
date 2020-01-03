@@ -6,7 +6,7 @@ package cpu_test
 
 import (
 	"errors"
-	. "internal/cpu"
+	. "github.com/bxq2011hust/fisco-tls/internal/cpu"
 	"io/ioutil"
 	"regexp"
 	"testing"

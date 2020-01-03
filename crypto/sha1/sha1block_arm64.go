@@ -4,7 +4,7 @@
 
 package sha1
 
-import "internal/cpu"
+import "github.com/bxq2011hust/fisco-tls/internal/cpu"
 
 var k = []uint32{
 	0x5A827999,

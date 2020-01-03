@@ -6,7 +6,7 @@ package fmtsort_test
 
 import (
 	"fmt"
-	"internal/fmtsort"
+	"github.com/bxq2011hust/fisco-tls/internal/fmtsort"
 	"math"
 	"reflect"
 	"strings"

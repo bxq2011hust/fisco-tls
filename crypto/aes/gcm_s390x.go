@@ -10,7 +10,7 @@ import (
 	"github.com/bxq2011hust/fisco-tls/crypto/subtle"
 	"encoding/binary"
 	"errors"
-	"internal/cpu"
+	"github.com/bxq2011hust/fisco-tls/internal/cpu"
 )
 
 // This file contains two implementations of AES-GCM. The first implementation

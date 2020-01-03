@@ -4,7 +4,7 @@
 
 package bytealg
 
-import "internal/cpu"
+import "github.com/bxq2011hust/fisco-tls/internal/cpu"
 
 const MaxBruteForce = 64
 

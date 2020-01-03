@@ -8,7 +8,7 @@ package windows_test
 
 import (
 	"fmt"
-	"internal/syscall/windows"
+	"github.com/bxq2011hust/fisco-tls/internal/syscall/windows"
 	"os"
 	"os/exec"
 	"syscall"

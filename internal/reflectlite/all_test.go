@@ -7,7 +7,7 @@ package reflectlite_test
 import (
 	"encoding/base64"
 	"fmt"
-	. "internal/reflectlite"
+	. "github.com/bxq2011hust/fisco-tls/internal/reflectlite"
 	"math"
 	"reflect"
 	"runtime"

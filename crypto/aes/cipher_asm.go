@@ -9,7 +9,7 @@ package aes
 import (
 	"github.com/bxq2011hust/fisco-tls/crypto/cipher"
 	"github.com/bxq2011hust/fisco-tls/crypto/internal/subtle"
-	"internal/cpu"
+	"github.com/bxq2011hust/fisco-tls/internal/cpu"
 )
 
 // defined in asm_*.s

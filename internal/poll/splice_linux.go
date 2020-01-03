@@ -5,7 +5,7 @@
 package poll
 
 import (
-	"internal/syscall/unix"
+	"github.com/bxq2011hust/fisco-tls/internal/syscall/unix"
 	"sync/atomic"
 	"syscall"
 	"unsafe"

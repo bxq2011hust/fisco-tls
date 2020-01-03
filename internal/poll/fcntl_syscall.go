@@ -7,7 +7,7 @@
 package poll
 
 import (
-	"internal/syscall/unix"
+	"github.com/bxq2011hust/fisco-tls/internal/syscall/unix"
 	"syscall"
 )
 

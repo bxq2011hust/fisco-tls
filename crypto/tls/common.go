@@ -17,7 +17,7 @@ import (
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"errors"
 	"fmt"
-	"internal/cpu"
+	"github.com/bxq2011hust/fisco-tls/internal/cpu"
 	"io"
 	"math/big"
 	"net"

@@ -6,7 +6,7 @@ package poll_test
 
 import (
 	"fmt"
-	"internal/poll"
+	"github.com/bxq2011hust/fisco-tls/internal/poll"
 	"os"
 	"sync"
 	"syscall"

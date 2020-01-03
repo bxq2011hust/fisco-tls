@@ -9,7 +9,7 @@
 package reflectlite_test
 
 import (
-	. "internal/reflectlite"
+	. "github.com/bxq2011hust/fisco-tls/internal/reflectlite"
 	"reflect"
 	"strconv"
 )

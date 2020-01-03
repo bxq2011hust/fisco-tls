@@ -11,7 +11,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"internal/testenv"
+	"github.com/bxq2011hust/fisco-tls/internal/testenv"
 	"io"
 	"io/ioutil"
 	"math"

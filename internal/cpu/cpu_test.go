@@ -5,8 +5,8 @@
 package cpu_test
 
 import (
-	. "internal/cpu"
-	"internal/testenv"
+	. "github.com/bxq2011hust/fisco-tls/internal/cpu"
+	"github.com/bxq2011hust/fisco-tls/internal/testenv"
 	"os"
 	"os/exec"
 	"runtime"

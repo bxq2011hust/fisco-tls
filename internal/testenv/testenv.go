@@ -13,7 +13,7 @@ package testenv
 import (
 	"errors"
 	"flag"
-	"internal/cfg"
+	"github.com/bxq2011hust/fisco-tls/internal/cfg"
 	"os"
 	"os/exec"
 	"path/filepath"
