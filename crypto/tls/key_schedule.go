@@ -138,6 +138,8 @@ func generateECDHEParameters(rand io.Reader, curveID CurveID) (ecdheParameters, 
 
 func curveForCurveID(id CurveID) (elliptic.Curve, bool) {
 	switch id {
+	case CurveSecp256k1:
+		return elliptic.Secp256k1(), true
 	case CurveP256:
 		return elliptic.P256(), true
 	case CurveP384:
