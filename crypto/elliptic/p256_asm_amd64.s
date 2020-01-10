@@ -43,11 +43,11 @@ GLOBL p256one<>(SB), 8, $32
 
 /* ---------------------------------------*/
 // func p256LittleToBig(res []byte, in []uint64)
-TEXT ·p256LittleToBig(SB),NOSPLIT,$0
+TEXT ·p256LittleToBig(SB),18,$0
 	JMP ·p256BigToLittle(SB)
 /* ---------------------------------------*/
 // func p256BigToLittle(res []uint64, in []byte)
-TEXT ·p256BigToLittle(SB),NOSPLIT,$0
+TEXT ·p256BigToLittle(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ in+24(FP), x_ptr
 
@@ -70,7 +70,7 @@ TEXT ·p256BigToLittle(SB),NOSPLIT,$0
 /* ---------------------------------------*/
 // func p256MovCond(res, a, b []uint64, cond int)
 // If cond == 0 res=b, else res=a
-TEXT ·p256MovCond(SB),NOSPLIT,$0
+TEXT ·p256MovCond(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ a+24(FP), x_ptr
 	MOVQ b+48(FP), y_ptr
@@ -130,7 +130,7 @@ TEXT ·p256MovCond(SB),NOSPLIT,$0
 	RET
 /* ---------------------------------------*/
 // func p256NegCond(val []uint64, cond int)
-TEXT ·p256NegCond(SB),NOSPLIT,$0
+TEXT ·p256NegCond(SB),18,$0
 	MOVQ val+0(FP), res_ptr
 	MOVQ cond+24(FP), t0
 	// acc = poly
@@ -163,7 +163,7 @@ TEXT ·p256NegCond(SB),NOSPLIT,$0
 	RET
 /* ---------------------------------------*/
 // func p256Sqr(res, in []uint64, n int)
-TEXT ·p256Sqr(SB),NOSPLIT,$0
+TEXT ·p256Sqr(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ in+24(FP), x_ptr
 	MOVQ n+48(FP), BX
@@ -327,7 +327,7 @@ sqrLoop:
 	RET
 /* ---------------------------------------*/
 // func p256Mul(res, in1, in2 []uint64)
-TEXT ·p256Mul(SB),NOSPLIT,$0
+TEXT ·p256Mul(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ in1+24(FP), x_ptr
 	MOVQ in2+48(FP), y_ptr
@@ -525,7 +525,7 @@ TEXT ·p256Mul(SB),NOSPLIT,$0
 	RET
 /* ---------------------------------------*/
 // func p256FromMont(res, in []uint64)
-TEXT ·p256FromMont(SB),NOSPLIT,$0
+TEXT ·p256FromMont(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ in+24(FP), x_ptr
 
@@ -606,7 +606,7 @@ TEXT ·p256FromMont(SB),NOSPLIT,$0
 // Indexed from 1 to 15, with -1 offset
 // (index 0 is implicitly point at infinity)
 // func p256Select(point, table []uint64, idx int)
-TEXT ·p256Select(SB),NOSPLIT,$0
+TEXT ·p256Select(SB),18,$0
 	MOVQ idx+48(FP),AX
 	MOVQ table+24(FP),DI
 	MOVQ point+0(FP),DX
@@ -669,7 +669,7 @@ loop_select:
 /* ---------------------------------------*/
 // Constant time point access to base point table.
 // func p256SelectBase(point, table []uint64, idx int)
-TEXT ·p256SelectBase(SB),NOSPLIT,$0
+TEXT ·p256SelectBase(SB),18,$0
 	MOVQ idx+48(FP),AX
 	MOVQ table+24(FP),DI
 	MOVQ point+0(FP),DX
@@ -741,7 +741,7 @@ loop_select_base:
 	RET
 /* ---------------------------------------*/
 // func p256OrdMul(res, in1, in2 []uint64)
-TEXT ·p256OrdMul(SB),NOSPLIT,$0
+TEXT ·p256OrdMul(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ in1+24(FP), x_ptr
 	MOVQ in2+48(FP), y_ptr
@@ -1028,7 +1028,7 @@ TEXT ·p256OrdMul(SB),NOSPLIT,$0
 	RET
 /* ---------------------------------------*/
 // func p256OrdSqr(res, in []uint64, n int)
-TEXT ·p256OrdSqr(SB),NOSPLIT,$0
+TEXT ·p256OrdSqr(SB),18,$0
 	MOVQ res+0(FP), res_ptr
 	MOVQ in+24(FP), x_ptr
 	MOVQ n+48(FP), BX
@@ -1310,7 +1310,7 @@ ordSqrLoop:
 #define t3 SI
 #define hlp BP
 /* ---------------------------------------*/
-TEXT p256SubInternal(SB),NOSPLIT,$0
+TEXT p256SubInternal(SB),18,$0
 	XORQ mul0, mul0
 	SUBQ t0, acc4
 	SBBQ t1, acc5
@@ -1336,7 +1336,7 @@ TEXT p256SubInternal(SB),NOSPLIT,$0
 
 	RET
 /* ---------------------------------------*/
-TEXT p256MulInternal(SB),NOSPLIT,$0
+TEXT p256MulInternal(SB),18,$0
 	MOVQ acc4, mul0
 	MULQ t0
 	MOVQ mul0, acc0
@@ -1519,7 +1519,7 @@ TEXT p256MulInternal(SB),NOSPLIT,$0
 
 	RET
 /* ---------------------------------------*/
-TEXT p256SqrInternal(SB),NOSPLIT,$0
+TEXT p256SqrInternal(SB),18,$0
 
 	MOVQ acc4, mul0
 	MULQ acc5
@@ -1988,7 +1988,7 @@ TEXT ·p256PointAddAffineAsm(SB),0,$512-96
 
 // p256IsZero returns 1 in AX if [acc4..acc7] represents zero and zero
 // otherwise. It writes to [acc4..acc7], t0 and t1.
-TEXT p256IsZero(SB),NOSPLIT,$0
+TEXT p256IsZero(SB),18,$0
 	// AX contains a flag that is set if the input is zero.
 	XORQ AX, AX
 	MOVQ $1, t1
@@ -2222,7 +2222,7 @@ TEXT ·p256PointAddAsm(SB),0,$680-80
 #define rptr	  (32*7)(SP)
 
 //func p256PointDoubleAsm(res, in []uint64)
-TEXT ·p256PointDoubleAsm(SB),NOSPLIT,$256-48
+TEXT ·p256PointDoubleAsm(SB),18,$256-48
 	// Move input to stack in order to free registers
 	MOVQ res+0(FP), AX
 	MOVQ in+24(FP), BX
