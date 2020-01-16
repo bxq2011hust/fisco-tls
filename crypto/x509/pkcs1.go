@@ -5,7 +5,7 @@
 package x509
 
 import (
-	"github.com/bxq2011hust/fisco-tls/crypto/rsa"
+	"crypto/rsa"
 	"encoding/asn1"
 	"errors"
 	"math/big"

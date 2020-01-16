@@ -7,8 +7,8 @@ package tls
 import (
 	"bytes"
 	"github.com/bxq2011hust/fisco-tls/crypto"
-	"github.com/bxq2011hust/fisco-tls/crypto/hmac"
-	"github.com/bxq2011hust/fisco-tls/crypto/rsa"
+	"crypto/hmac"
+	"crypto/rsa"
 	"errors"
 	"hash"
 	"sync/atomic"

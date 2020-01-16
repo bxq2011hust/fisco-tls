@@ -7,7 +7,7 @@
 package elliptic
 
 import (
-	"github.com/bxq2011hust/fisco-tls/crypto/subtle"
+	"crypto/subtle"
 	"github.com/bxq2011hust/fisco-tls/internal/cpu"
 	"math/big"
 	"unsafe"

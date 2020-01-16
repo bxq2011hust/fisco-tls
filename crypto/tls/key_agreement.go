@@ -6,9 +6,9 @@ package tls
 
 import (
 	"github.com/bxq2011hust/fisco-tls/crypto"
-	"github.com/bxq2011hust/fisco-tls/crypto/md5"
-	"github.com/bxq2011hust/fisco-tls/crypto/rsa"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha1"
+	"crypto/md5"
+	"crypto/rsa"
+	"crypto/sha1"
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"errors"
 	"fmt"

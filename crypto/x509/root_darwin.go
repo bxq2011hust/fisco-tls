@@ -9,7 +9,7 @@ package x509
 import (
 	"bufio"
 	"bytes"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha1"
+	"crypto/sha1"
 	"encoding/pem"
 	"fmt"
 	"io"

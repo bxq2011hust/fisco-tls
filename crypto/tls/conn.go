@@ -8,8 +8,8 @@ package tls
 
 import (
 	"bytes"
-	"github.com/bxq2011hust/fisco-tls/crypto/cipher"
-	"github.com/bxq2011hust/fisco-tls/crypto/subtle"
+	"crypto/cipher"
+	"crypto/subtle"
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"errors"
 	"fmt"

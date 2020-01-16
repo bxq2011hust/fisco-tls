@@ -11,7 +11,7 @@ package main
 
 import (
 	"crypto/rand"
-	"crypto/x509"
+	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"crypto/x509/pkix"
 	"encoding/pem"
 	"math/big"

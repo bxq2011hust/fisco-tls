@@ -11,12 +11,12 @@ package main
 
 import (
 	"github.com/bxq2011hust/fisco-tls/crypto/ecdsa"
-	"github.com/bxq2011hust/fisco-tls/crypto/ed25519"
+	"crypto/ed25519"
 	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
-	"github.com/bxq2011hust/fisco-tls/crypto/rand"
-	"github.com/bxq2011hust/fisco-tls/crypto/rsa"
+	"crypto/rand"
+	"crypto/rsa"
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
-	"github.com/bxq2011hust/fisco-tls/crypto/x509/pkix"
+	"crypto/x509/pkix"
 	"encoding/pem"
 	"flag"
 	"log"

@@ -7,8 +7,8 @@ package tls
 import (
 	"bytes"
 	"crypto"
-	"crypto/elliptic"
-	"crypto/x509"
+	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
+	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"encoding/pem"
 	"errors"
 	"fmt"

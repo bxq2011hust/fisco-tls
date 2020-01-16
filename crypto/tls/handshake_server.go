@@ -7,9 +7,9 @@ package tls
 import (
 	"github.com/bxq2011hust/fisco-tls/crypto"
 	"github.com/bxq2011hust/fisco-tls/crypto/ecdsa"
-	"github.com/bxq2011hust/fisco-tls/crypto/ed25519"
-	"github.com/bxq2011hust/fisco-tls/crypto/rsa"
-	"github.com/bxq2011hust/fisco-tls/crypto/subtle"
+	"crypto/ed25519"
+	"crypto/rsa"
+	"crypto/subtle"
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"errors"
 	"fmt"

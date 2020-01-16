@@ -6,11 +6,11 @@ package tls
 
 import (
 	"github.com/bxq2011hust/fisco-tls/crypto"
-	"github.com/bxq2011hust/fisco-tls/crypto/hmac"
-	"github.com/bxq2011hust/fisco-tls/crypto/md5"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha1"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha256"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha512"
+	"crypto/hmac"
+	"crypto/md5"
+	"crypto/sha1"
+	"crypto/sha256"
+	"crypto/sha512"
 	"errors"
 	"fmt"
 	"hash"

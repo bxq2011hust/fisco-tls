@@ -6,7 +6,7 @@ package tls
 
 import (
 	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
-	"github.com/bxq2011hust/fisco-tls/crypto/hmac"
+	"crypto/hmac"
 	"errors"
 	"hash"
 	"io"

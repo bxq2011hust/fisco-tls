@@ -6,11 +6,11 @@ package tls
 
 import (
 	"bytes"
-	"github.com/bxq2011hust/fisco-tls/crypto/aes"
-	"github.com/bxq2011hust/fisco-tls/crypto/cipher"
-	"github.com/bxq2011hust/fisco-tls/crypto/hmac"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha256"
-	"github.com/bxq2011hust/fisco-tls/crypto/subtle"
+	"crypto/aes"
+	"crypto/cipher"
+	"crypto/hmac"
+	"crypto/sha256"
+	"crypto/subtle"
 	"errors"
 	"golang.org/x/crypto/cryptobyte"
 	"io"

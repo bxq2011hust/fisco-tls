@@ -18,7 +18,7 @@ package main
 
 import (
 	"bytes"
-	"github.com/bxq2011hust/fisco-tls/crypto/sha256"
+	"crypto/sha256"
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"encoding/hex"
 	"encoding/pem"
