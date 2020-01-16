@@ -35,7 +35,7 @@ import (
 	"io"
 	"math/big"
 	
-	"github.com/bxq2011hust/fisco-tls/crypto"
+	"crypto"
 	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"
 	"github.com/bxq2011hust/fisco-tls/crypto/internal/randutil"
 )

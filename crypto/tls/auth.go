@@ -6,7 +6,7 @@ package tls
 
 import (
 	"bytes"
-	"github.com/bxq2011hust/fisco-tls/crypto"
+	"crypto"
 	"github.com/bxq2011hust/fisco-tls/crypto/ecdsa"
 	"crypto/ed25519"
 	"github.com/bxq2011hust/fisco-tls/crypto/elliptic"

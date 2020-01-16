@@ -5,7 +5,7 @@
 package tls
 
 import (
-	"github.com/bxq2011hust/fisco-tls/crypto"
+	"crypto"
 	"crypto/hmac"
 	"crypto/md5"
 	"crypto/sha1"

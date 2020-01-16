@@ -11,7 +11,7 @@ import (
 	"crypto/rsa"
 	"errors"
 	"fmt"
-	"github.com/bxq2011hust/fisco-tls/crypto"
+	"crypto"
 	"crypto/subtle"
 	"github.com/bxq2011hust/fisco-tls/crypto/x509"
 	"io"
